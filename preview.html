@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>preview</title>
+    </head>
+    <body>
+        <style>
+        body{
+            animation: changingColor 3s infinite alternate;
+        }
+
+        @keyframes changingColor{
+            0%{background-color: #0015ff;}
+            100%{background-color: #6f00ff;}
+        }    
+        </style>
+
+        <script>
+            const text = document.createElement(`div`);
+            text.style.textAlign = `center`;
+            text.style.fontSize = `500%`;
+            document.body.appendChild(text);
+
+            const codingLanguages = [`JavaScript`, `HTML`, `CSS`];
+            var codingLanguage = 0;
+            function mainloop(){
+                setTimeout(() => {
+                    codingLanguage++;
+                    codingLanguage %= 3;
+                    text.innerText = 
+                    `Websites made with ${codingLanguages[codingLanguage]}`;
+                    mainloop();
+                }
+                ,3000);
+            }
+            text.innerText =
+            `Websites made with ${codingLanguages[codingLanguage]}`;
+            mainloop()
+        </script>
+    </body>
+</html>

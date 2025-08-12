@@ -1,0 +1,61 @@
+body{
+    animation: changingColor 20s infinite alternate;
+}
+
+@keyframes changingColor{
+    0%{background-color: #0049ae;}
+    100%{background-color: #2b00ff;}
+}
+
+.title{
+    position: absolute;
+    text-align: center;
+    font-size: 300%;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+
+    animation: titleChangingColor 5s infinite alternate;
+}
+
+@keyframes titleChangingColor{
+    0%{color: yellow;}
+    50%{color: orange;}
+    100%{color: blue;}
+}
+
+.repository{
+    position: absolute;
+    font-size: 250%;
+    left: 50%;
+    top: 130%;
+    transform: translate(-50%, -50%);
+}
+
+.visit{
+    position: absolute;
+    text-align: center;
+    font-size: 500%;
+    left: 50%;
+    top: 110%;
+    transform: translate(-50%, -50%);
+}
+
+button{
+    position: absolute;
+    text-align: center;
+    font-size: 200%;
+    left: 50%;
+    top: 140%;
+    transform: translate(-50%, -50%);
+}
+
+a{
+    background-color: black;
+    position: absolute;
+    text-align: center;
+    font-size: 200%;
+    left: 9%;
+    top: 140%;
+    transform: translate(-50%, -50%);
+}
